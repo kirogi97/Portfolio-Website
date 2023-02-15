@@ -6,41 +6,207 @@
         <title>Nina Makena Portfolio Website</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <style> /* Style for header */
+            .header {
+               background-color: #333;
+               color: #fff;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               padding: 10px;
+           }
+           
+           /* Style for logo */
+           .logo {
+               flex: 1;
+               font-size: 24px;
+               font-weight: bold;
+               text-align: left;
+           }
+           
+           /* Style for navigation */
+           .navigation {
+               flex: 3;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: flex-end;
+           }
+           
+           .navigation a {
+               color: #fff;
+               margin: 5px;
+               text-decoration: none;
+           }
+           
+           /* Media query for smaller screens */
+           @media only screen and (max-width: 600px) {
+               .header {
+                   flex-direction: column;
+                   align-items: center;
+               }
+           
+               .navigation {
+                   order: -1;
+               }
+           
+               .logo {
+                   text-align: center;
+               }
+           }
+           /* Testimonial slider */
+           .testimonial-slider-container {
+               position: relative;
+               width: 100%;
+               height: 200px;
+             }
+             
+             .testimonial-slider {
+               display: flex;
+               flex-wrap: nowrap;
+               overflow-x: auto;
+               -webkit-overflow-scrolling: touch;
+               scroll-behavior: smooth;
+               width: 100%;
+               height: 100%;
+             }
+             
+             .testimonial-slide {
+               flex: 0 0 100%;
+               padding: 20px;
+               text-align: center;
+             }
+             
+             .testimonial-slide.active {
+               background-color: #f5f5f5;
+             }
+             
+             .testimonial-text {
+               font-size: 20px;
+               line-height: 1.5;
+               margin-bottom: 20px;
+             }
+             
+             .testimonial-author {
+               font-size: 16px;
+               font-style: italic;
+             }
+             
+             .slider-controls {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+             }
+             
+             .slider-controls .prev-slide,
+             .slider-controls .next-slide {
+               font-size: 30px;
+               color: #ccc;
+               cursor: pointer;
+               background-color: rgba(255, 255, 255, 0.5);
+               padding: 10px;
+             }
+             
+             .slider-controls .prev-slide:hover,
+             .slider-controls .next-slide:hover {
+               color: #333;
+             }
+             
+        </style>
+        
+        <script>
+            const interval = 4000; // Interval in milliseconds
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const slideCount = slides.length;
+            const prevSlideBtn = document.querySelector('.prev-slide');
+            const nextSlideBtn = document.querySelector('.next-slide');
+            
+            function showSlide() {
+              // Hide all slides
+              for (let i = 0; i < slideCount; i++) {
+                slides[i].classList.remove('active');
+              }
+            
+              // Show current slide
+              slides[slideIndex].classList.add('active');
+            
+              // Increment slide index
+              slideIndex++;
+            
+              // If at end of slides, start over
+              if (slideIndex === slideCount) {
+                slideIndex = 0;
+              }
+            
+              // Set interval to run again
+              setTimeout(showSlide, interval);
+            }
+            
+            // Start slider
+            showSlide();
+            
+            // Add click event listeners to prev
+            
+        </script>
+
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="" alt="">
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home|Portfolio</a></li>
-                    <li class="nav__item"><a href="naked_lies.html" class="nav__link">Naked Lies</a></li>
-                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
-                    <li class="nav__item"><a href="contact_me.html" class="nav__link">Contact Me</a></li>
-                    
-                </ul>
+        <header class="header">
+            <div class="logo">Logo</div>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
             </nav>
-                
         </header>
         <showcase>
 
         </showcase>
         <!--Introduction-->
         <section >
-            <div style="background-color: #f8f8f8; padding: 20px; overflow: hidden;">
-                <div style="float: right; margin: 0 0 10px 10px;">
-                  <img src="Images/nina_place_1.jpg" style="max-width: 100%; height: auto;">
+            <div style="display: flex; align-items: center; background-color: #f8f8f8; padding: 20px;">
+                <div>
+                  <h2 style="margin-top: 0;"><B>NINA MAKENA</B><br><I>Creativity and Innovation</I></h2>
+                  <p style="text-align: left;">
+                    Introducing Nina Makena, the young and dynamic creativity and innovation consultant who challenges conventions and pushes boundaries. As a trusted advisor, Ms. Makena helps businesses unleash their creative potential and turn bold ideas into reality. And if you want to dive even deeper into the creative process, look no further than Ms. Makena's hit podcast, Naked Lies. Through candid conversations and thought-provoking insights, She explores the truths behind innovation, creativity, and success. Tune in to Naked Lies and uncover the naked truth about what it takes to thrive in today's fast-paced world.
+                  </p>
                 </div>
-                <p style="text-align: left;">
-                  Podcasting is a great way to share your voice with the world. Whether you're a hobbyist or a professional, there's a podcast out there for everyone. With the rise of smartphones and easy-to-use recording software, it's never been easier to start your own podcast. Join the conversation today and see where your voice takes you.
-                </p>
+                <img src="Images/nina_place_1.jpg" style="max-width: 50%; height: auto; margin-left: 20px; border-radius: 10%;">
+              </div>
+              
+              
+              
+        </section>
+        <section>
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider">
+                  <div class="testimonial-slide active">
+                    <p class="testimonial-text">"I love this slider! It's so easy to use and looks great on my website."</p>
+                    <p class="testimonial-author">- John Smith</p>
+                  </div>
+                  <div class="testimonial-slide">
+                    <p class="testimonial-text">"The support team was amazing. They helped me resolve an issue I was having in no time."</p>
+                    <p class="testimonial-author">- Jane Doe</p>
+                  </div>
+                  <div class="testimonial-slide">
+                    <p class="testimonial-text">"This is by far the best slider I've ever used. It's so smooth and responsive."</p>
+                    <p class="testimonial-author">- Tom Johnson</p>
+                  </div>
+                </div>
+                <div class="slider-controls">
+                  <div class="prev-slide"><i class="fa fa-chevron-left"></i></div>
+                  <div class="next-slide"><i class="fa fa-chevron-right"></i></div>
+                </div>
               </div>
               
         </section>
 
         <footer></footer>
+        </body>
 </html>
