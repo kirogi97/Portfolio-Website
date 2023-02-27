@@ -53,114 +53,86 @@
                    text-align: center;
                }
            }
-           /* Testimonial slider */
-           .testimonial-slider-container {
-               position: relative;
-               width: 100%;
-               height: 200px;
-             }
-             
-             .testimonial-slider {
-               display: flex;
-               flex-wrap: nowrap;
-               overflow-x: auto;
-               -webkit-overflow-scrolling: touch;
-               scroll-behavior: smooth;
-               width: 100%;
-               height: 100%;
-             }
-             
-             .testimonial-slide {
-               flex: 0 0 100%;
-               padding: 20px;
-               text-align: center;
-             }
-             
-             .testimonial-slide.active {
-               background-color: #f5f5f5;
-             }
-             
-             .testimonial-text {
-               font-size: 20px;
-               line-height: 1.5;
-               margin-bottom: 20px;
-             }
-             
-             .testimonial-author {
-               font-size: 16px;
-               font-style: italic;
-             }
-             
-             .slider-controls {
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-             }
-             
-             .slider-controls .prev-slide,
-             .slider-controls .next-slide {
-               font-size: 30px;
-               color: #ccc;
-               cursor: pointer;
-               background-color: rgba(255, 255, 255, 0.5);
-               padding: 10px;
-             }
-             
-             .slider-controls .prev-slide:hover,
-             .slider-controls .next-slide:hover {
-               color: #333;
-             }
-             
+
+           /* footer style*/
+           footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+footer ul.social-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul.social-icons li:last-child {
+  margin-right: 0;
+}
+
+footer ul.social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer ul.social-icons li a:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  
+  footer .container {
+    padding: 0;
+  }
+  
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  footer .col-md-6 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
+         
         </style>
         
-        <script>
-            const interval = 4000; // Interval in milliseconds
-            let slideIndex = 0;
-            const slides = document.querySelectorAll('.testimonial-slide');
-            const slideCount = slides.length;
-            const prevSlideBtn = document.querySelector('.prev-slide');
-            const nextSlideBtn = document.querySelector('.next-slide');
-            
-            function showSlide() {
-              // Hide all slides
-              for (let i = 0; i < slideCount; i++) {
-                slides[i].classList.remove('active');
-              }
-            
-              // Show current slide
-              slides[slideIndex].classList.add('active');
-            
-              // Increment slide index
-              slideIndex++;
-            
-              // If at end of slides, start over
-              if (slideIndex === slideCount) {
-                slideIndex = 0;
-              }
-            
-              // Set interval to run again
-              setTimeout(showSlide, interval);
-            }
-            
-            // Start slider
-            showSlide();
-            
-            // Add click event listeners to prev
-            
-        </script>
+        
 
     </head>
     <body>
         <header class="header">
-            <div class="logo">Logo</div>
+            <div class="logo"><a href="index.html">Logo</a></div>
             <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">About</a>
+                <a href="index.html">Home</a>
+                <a href="naked_lies.html">Naked Lies</a>
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
             </nav>
@@ -179,34 +151,29 @@
                 </div>
                 <img src="Images/nina_place_1.jpg" style="max-width: 50%; height: auto; margin-left: 20px; border-radius: 10%;">
               </div>
-              
-              
-              
         </section>
-        <section>
-            <div class="testimonial-slider-container">
-                <div class="testimonial-slider">
-                  <div class="testimonial-slide active">
-                    <p class="testimonial-text">"I love this slider! It's so easy to use and looks great on my website."</p>
-                    <p class="testimonial-author">- John Smith</p>
-                  </div>
-                  <div class="testimonial-slide">
-                    <p class="testimonial-text">"The support team was amazing. They helped me resolve an issue I was having in no time."</p>
-                    <p class="testimonial-author">- Jane Doe</p>
-                  </div>
-                  <div class="testimonial-slide">
-                    <p class="testimonial-text">"This is by far the best slider I've ever used. It's so smooth and responsive."</p>
-                    <p class="testimonial-author">- Tom Johnson</p>
-                  </div>
+       
+
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h3>Contact Us</h3>
+                  <p>Email: ninamakena@gmail.com<br>Phone: +254 111 445373<br>Address: 00100 Mbagathi, Nairobi, KENYA</p>
                 </div>
-                <div class="slider-controls">
-                  <div class="prev-slide"><i class="fa fa-chevron-left"></i></div>
-                  <div class="next-slide"><i class="fa fa-chevron-right"></i></div>
+                <div class="col-md-6">
+                  <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <p>&copy; 2023 Company Name. All rights reserved.</p>
                 </div>
               </div>
-              
-        </section>
-
-        <footer></footer>
+            </div>
+          </footer>
+          
+          
         </body>
 </html>

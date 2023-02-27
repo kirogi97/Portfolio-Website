@@ -6,38 +6,230 @@
         <title>Nina Makena Portfolio Website</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <style> /* Style for header */
+            .header {
+               background-color: #333;
+               color: #fff;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               padding: 10px;
+           }
+           
+           /* Style for logo */
+           .logo {
+               flex: 1;
+               font-size: 24px;
+               font-weight: bold;
+               text-align: left;
+           }
+           
+           /* Style for navigation */
+           .navigation {
+               flex: 3;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: flex-end;
+           }
+           
+           .navigation a {
+               color: #fff;
+               margin: 5px;
+               text-decoration: none;
+           }
+           
+           /* Media query for smaller screens */
+           @media only screen and (max-width: 600px) {
+               .header {
+                   flex-direction: column;
+                   align-items: center;
+               }
+           
+               .navigation {
+                   order: -1;
+               }
+           
+               .logo {
+                   text-align: center;
+               }
+           }
+
+           /* footer style*/
+           footer h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+footer ul.social-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul.social-icons li:last-child {
+  margin-right: 0;
+}
+
+footer ul.social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer ul.social-icons li a:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  
+  footer .container {
+    padding: 0;
+  }
+  
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  footer .col-md-6 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+/* Podcast holder style */
+.podcast-holder {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.podcast-image {
+  flex: 0 0 200px;
+}
+
+.podcast-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.podcast-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.podcast-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.podcast-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.podcast-info a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #007bff;
+}
+
+.podcast-info a:hover {
+  text-decoration: underline;
+}
+
+
+         
+        </style>
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="" alt="">
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home|Portfolio</a></li>
-                    <li class="nav__item"><a href="naked_lies.html" class="nav__link">Naked Lies</a></li>
-                    <li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li>
-                    <li class="nav__item"><a href="contact_me.html" class="nav__link">Contact Me</a></li>
-                    
-                </ul>
+        <header class="header">
+            <div class="logo"><a href="index.html">Logo</a></div>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="naked_lies.html">Naked Lies</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
             </nav>
-                
         </header>
         <showcase>
 
         </showcase>
         <!--Introduction-->
-        <section class="intro" id="home">
-            <h1 class="section__title section__tittle--intro">
-                Hi, I am <strong>Nina Makena</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Introducing Nina Makena, the young and dynamic creativity and innovation consultant who challenges conventions and pushes boundaries. As a trusted advisor, Ms. Makena helps businesses unleash their creative potential and turn bold ideas into reality. And if you want to dive even deeper into the creative process, look no further than Ms. Makena's hit podcast, Naked Lies. Through candid conversations and thought-provoking insights, She explores the truths behind innovation, creativity, and success. Tune in to Naked Lies and uncover the naked truth about what it takes to thrive in today's fast-paced world.
-</p>
-            <img src="Images/nina_place_1.jpg" alt="Images/nina_place_alt.jpg">
+        <section >
+            <div style="display: flex; align-items: center; background-color: #9793937e; padding: 20px;">
+                <div>
+                  <h2 style="margin-top: 0;"><B>NAKED LIES</B></h2>
+                  <p style="text-align: left;">
+                    "Naked Lies" is a podcast that delves deep into the unspoken truths of life. Each episode features a take on personal experiences of struggling through the ups and downs of life. From heartbreak to financial struggles, the podcast aims to explore the raw realities of what it means to be human.
+We meet a young woman who describes herself as "Just a lonely girl living in lonely streets with empty pockets and a bag full of dreams." She opens up about the challenges she's faced as she's pursued her dreams, from financial hardship to loneliness and isolation. But even in the face of adversity, she's maintained her determination and drive, using her hardships as fuel to keep pushing forward.
+Join us for raw and honest conversation(s) about life's struggles, as we explore the naked truths behind the lies we tell ourselves and others. Tune in to "Naked Lies" to hear inspiring stories.
+                  </p>
+                </div>
+                <img src="Images/naked_lies.jpg" style="max-width: 50%; height: auto; margin-left: 30px; border-radius: 10%;">
+              </div>
         </section>
+        <!--Podcast Holder-->
+        <div class="podcast-holder">
+            <div class="podcast-image">
+              <img src="Images/naked_lies.jpg" alt="Podcast Image">
+            </div>
+            <div class="podcast-info">
+              <h2>Recent Episodes</h2>
+              <p>Hosted by Nina Makena</p>
+              <a href="https://open.spotify.com/episode/7q0DgeTzsYzbQi62NzfkoQ?si=ad6b43afc46a4c92" >How long will you be my ex??</a>
+              <a href="https://open.spotify.com/episode/1Odkv0MSnHc1J5MKzQZzCM?si=c6b8fc30883d4000">The Law Of Attraction</a>
+              <a href="https://open.spotify.com/episode/38CQTA1E9SHOqiWvuGWzhN?si=50470df16f1c4148">G.R.O.W.T.H II</a>
+            </div>
+          </div>
+          
 
-        <footer></footer>
+        <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Contact Us</h3>
+        <p>Email: ninamakena@gmail.com<br>Phone: +254 111 445373<br>Address: 00100 Mbagathi, Nairobi, KENYA</p>
+      </div>
+      <div class="col-md-6">
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; 2023 Naked Lies. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>
